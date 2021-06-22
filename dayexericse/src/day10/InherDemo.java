@@ -6,7 +6,7 @@ public class InherDemo {
 		Employee p=new Engineer();
 		Engineer eng=new Engineer();
 		
-		p.met(2);
+		p.met(4);
 		eng.met(2);
 	}
 }

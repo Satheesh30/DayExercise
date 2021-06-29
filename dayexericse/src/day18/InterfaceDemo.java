@@ -3,17 +3,19 @@ package day18;
 public class InterfaceDemo {
 
 	public static void main(String[] args) {
+		
 		AlopathyMedicalCollege stanley=new AlopathyMedicalCollege();
 		Doctor doctor=(Doctor)stanley;
 		doctor.doCure();
 		Nurse nurse=(Nurse)stanley;
 		nurse.doNursing();
-		
+		int i=20;
+		System.out.println(i);
 		HomeoPathyMedicalCollege homeoDoctor=new HomeoPathyMedicalCollege();
 		Doctor doctor2=(Doctor)homeoDoctor;
 		doctor2.doCure();
-		Nurse nurse2=(Nurse)homeoDoctor;//I will get a exception at this line
-		nurse2.doNursing();
+		//Nurse nurse2=(Nurse)homeoDoctor;//I will get a exception at this line
+	//	nurse2.doNursing();
 	}
 	}interface Doctor{
 		//there is no compulsion to have a method
@@ -40,7 +42,7 @@ public class InterfaceDemo {
 	interface Surgeon extends Doctor{
 		
 	}
-	interface Nurse{
+	 interface Nurse{
 		public void doNursing();
 	}
 	//implementation class of Interface...
@@ -51,7 +53,7 @@ public class InterfaceDemo {
 	}
 		@Override
 		public void doCure() {
-			System.out.println("do cure method called..as per alopathy.....");
+			System.out.println("do cure method called..as per alopathy....."+i);
 		}
 	}
 	class HomeoPathyMedicalCollege implements Doctor{

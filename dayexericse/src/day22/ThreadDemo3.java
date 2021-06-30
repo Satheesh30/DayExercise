@@ -15,27 +15,27 @@ public class ThreadDemo3 {
 
 }
 class Bookingjob implements Runnable{
-	ReservationCounter central ;
+	ReservationCounter centra ;
 	int amt;
 	public Bookingjob(ReservationCounter central,int amt) {
-		this.central=central;
+		this.centra=central;
 		this.amt=amt;
 		
 	}
 	@Override
 	
 	public void run() {
-		central.bookTicket(amt);
-		central.givechange();
+		centra.bookTicket(amt);
+		centra.givechange();
 		
 	}
 }
 class ReservationCounter{
 	int amt;
 	void bookTicket(int amt) {
-		Thread t=Thread.currentThread();
+		Thread s=Thread.currentThread();
 		this.amt=amt;
-		String name=t.getName();
+		String name=s.getName();
 		System.out.println(name+" has come to book ticket..");
 		System.out.println(name+" brougth "+amt);
 	}
